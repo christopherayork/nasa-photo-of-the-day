@@ -1,12 +1,13 @@
 import React from 'react';
+import ExpDiv from './ExplanationStyled';
 
 function Explanation(props) {
   let text = props.text;
 
   return (
-      <div className={'explanation'}>
+      <ExpDiv>
         <p>{text}</p>
-      </div>
+      </ExpDiv>
   );
 }
 

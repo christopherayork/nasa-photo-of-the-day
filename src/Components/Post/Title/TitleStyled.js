@@ -7,7 +7,7 @@ const TitleStyled = styled.div`
   color: ${Palette.secondary.light};
   display: flex;
   justify-content: space-between;
-  width: 99.5%;
+  width: 98%;
 
 `;
 
