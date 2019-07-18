@@ -1,14 +1,20 @@
 import React from 'react';
+import { VideoDiv, Image } from './VideoStyled';
 
 function Video(props) {
   let url = props.url;
+  let type = /youtube/i.exec(url); // Array or false
 
   return (
-      <div className={'video'}>
-        <iframe width={'320'} height={'240'} src={url} frameBorder="0" allow={'accelerometer autoplay encrypted-media gyroscope picture-in-picture'} allowFullScreen>
-        </iframe>
-        {/*<img src={url} />*/}
-      </div>
+      <VideoDiv>
+        {(() => {
+          if(type) {
+            return <iframe title={'IOTD'} width={'320'} height={'240'} src={url} frameBorder="0" allow={'autoplay'} allowFullScreen>
+            </iframe>;
+          }
+          else return <Image src={url}/>;
+        })()}
+      </VideoDiv>
   );
 }
 

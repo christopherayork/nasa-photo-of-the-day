@@ -1,14 +1,14 @@
 import React from 'react';
-
+import TitleStyled from './TitleStyled';
 
 function Title(props) {
   let {title, date} = props;
 
   return (
-    <div className={'title-container'}>
+    <TitleStyled>
       <p className={'title'}>{title}</p>
       <p className={'date'}>{date}</p>
-    </div>
+    </TitleStyled>
   );
 }
 

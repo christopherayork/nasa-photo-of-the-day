@@ -2,6 +2,7 @@ import React from 'react';
 import Title from './Title/Title.js';
 import Video from './Video/Video.js';
 import Explanation from './Explanation/Explanation.js';
+import PostDiv from './PostStyled';
 
 function Post(props) {
   let promise = props.promise;
@@ -11,11 +12,11 @@ function Post(props) {
   let explanation = promise.data.explanation;
 
   return (
-      <div className={'post'}>
+      <PostDiv>
         <Title title={title} date={date} />
         <Video url={url} />
         <Explanation text={explanation} />
-      </div>
+      </PostDiv>
   );
 }
 
